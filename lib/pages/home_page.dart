@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../details_page.dart';
+import 'first_page.dart';
 //  Import FILES
 //  //   ///
 
@@ -38,7 +39,12 @@ class HomePage extends StatelessWidget {
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.white,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const FirstPage()),
+                  );
+                },
                 child: const Text('First')),
             const SizedBox(height: 10.0),
             ElevatedButton(
