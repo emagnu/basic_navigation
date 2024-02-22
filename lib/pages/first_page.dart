@@ -13,25 +13,10 @@ class FirstPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('First Page'),
         elevation: 18.0,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.teal,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('First Page To navigate back\npress the button below'),
-            const SizedBox(height: 20.0),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text('Go back'),
-            ),
-          ],
-        ),
+      body: const Center(
+        child: Text('This is the FIRST page!'),
       ),
     );
   }

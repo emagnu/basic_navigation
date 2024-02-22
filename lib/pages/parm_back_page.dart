@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 //  Import FILES
 //  //   ///
 
-class PopPage extends StatelessWidget {
-  const PopPage({super.key});
+class ParmBackPage extends StatelessWidget {
+  const ParmBackPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,20 +14,21 @@ class PopPage extends StatelessWidget {
         title: const Text('First Page'),
         elevation: 18.0,
         backgroundColor: Colors.blue,
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-                'POP Page\n\nTo navigate back\npress the arrow above\n\nTo \'pop\' this page\npress the button below'),
+                'Parameter Back Page\n\nThe Arrow to navigate\nback has been removed\n\nTo \'pop\' this page\nand return a parameter\npress the button below'),
             const SizedBox(height: 20.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueGrey,
               ),
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.pop(context, "Flutter is awesome!");
               },
               child: const Text('Go back'),
             ),
